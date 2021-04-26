@@ -4,7 +4,13 @@ Developed by: **@aausek**
 
 ## Product Description
 
-This simple script downloads a file via a specific URL then proceeds to rename it to reflect the date of download and also log the script execution to *changelog.txt*.
+This simple script downloads a file via a specific URL then proceeds to timestamp it to reflect download date and log the script execution to *changelog.txt*. Daily file contents are then appended to master file.
+
+## Completed Features
+
+- File download & renaming
+- Execution logging
+- Appending contents to master
 
 ## Libraries used
 

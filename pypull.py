@@ -5,12 +5,18 @@ import urllib.request, os, time
 # Use time library to pull timestamp of downloaded file
 timestr = time.strftime("%Y-%m-%d")
 
+path = './MDC/DataFiles/'
+
+fileExtension = '.csv'
+
 # Funtion to access URL and download file
-def pullURL():
+def pullurl():
     # Medical Checkin request URL
     url = 'https://www.cmgcheckin.com/login/exportall.php'
-    # Make request to URL and download file to path and file name specified  
-    r = urllib.request.urlretrieve(url, './MDC/DataFiles/' + timestr + '.csv')
+    # Make request to URL and download file to path and file name specified
+    r = urllib.request.urlretrieve(url, path + timestr + fileExtension)
+    filename = path + timestr + fileExtension
+    appendtomaster(filename)
 
 # Function to rename .csv file downloaded with timestamp
 # def fileRename():
@@ -18,7 +24,7 @@ def pullURL():
 #     os.rename('./MDC/DataFiles/export.csv','./MDC/DataFiles/' + timestr + '.csv')
 
 # Function to log script execution
-def Logger():
+def logger():
     # Open changelog.txt and append new row
     f = open('./MDC/changelog.txt', 'a')
     # Assign temp variable to timezone portion of timestamp
@@ -41,12 +47,12 @@ def Logger():
     f.close()
 
 # Function to append data to master file
-def appendToMaster():
+def appendtomaster(filename):
     # Open daily file in read-mode
-    file = open('./MDC/DataFiles/' + timestr + '.csv', 'r')
+    file = open(filename, 'r')
     # Open master file in append-mode
     master = open('./MDC/master.csv', 'a+')
-    
+
     with file as f:
         next(f)
         for line in f:
@@ -58,8 +64,10 @@ def appendToMaster():
     file.close()
     master.close()
 
-# Call all functions
-pullURL()
-# fileRename() -- Unused function
-Logger()
-appendToMaster()
+# Main function
+def main():
+    pullurl()
+    logger()
+
+# Call main()
+main()

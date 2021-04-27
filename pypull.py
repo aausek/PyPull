@@ -12,10 +12,12 @@ fileExtension = '.csv'
 # Funtion to access URL and download file
 def pullurl():
     # Medical Checkin request URL
-    url = 'https://www.cmgcheckin.com/login/exportall.php'
+    url = 'https://www.example.com'
     # Make request to URL and download file to path and file name specified
     r = urllib.request.urlretrieve(url, path + timestr + fileExtension)
+    # Assign variable to newly generated file name
     filename = path + timestr + fileExtension
+    # Call appendtomaster() 
     appendtomaster(filename)
 
 # Function to rename .csv file downloaded with timestamp

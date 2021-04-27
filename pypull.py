@@ -1,3 +1,5 @@
+# DEVELOPED BY ANA AUSEK - 2021-04-26
+
 # Import libraries
 import urllib.request, os, time
 

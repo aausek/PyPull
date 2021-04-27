@@ -20,13 +20,13 @@ This simple script downloads a file via a specific URL then proceeds to timestam
 
 ## Running the script
 
-On *Windows Powershell*, ensure you have the latest Python version installed then navigate to file directory and enter the script name. 
+On *Windows Powershell*, ensure you have the latest Python version installed then navigate to file directory and run the command: 
 
 `
 PS C:\Users\Folder> .\pypull.py
 `
 
-On *Mac Terminal*, ensure you have the latest Python version installed then navigate to file directory and enter the script name.
+On *Mac Terminal*, ensure you have the latest Python version installed then navigate to file directory and run the command:
 
 `
 $ python3 pypull.py

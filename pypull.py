@@ -7,7 +7,7 @@ import urllib.request, os, time
 # Use time library to pull timestamp of downloaded file
 timestr = time.strftime("%Y-%m-%d")
 
-path = './MDC/DataFiles/'
+path = './DataFiles/'
 
 fileExtension = '.csv'
 
@@ -30,7 +30,7 @@ def pullurl():
 # Function to log script execution
 def logger():
     # Open changelog.txt and append new row
-    f = open('./MDC/changelog.txt', 'a')
+    f = open('changelog.txt', 'a')
     # Assign temp variable to timezone portion of timestamp
     temp = time.strftime("%Z")
     # Log temp value
@@ -55,7 +55,7 @@ def appendtomaster(filename):
     # Open daily file in read-mode
     file = open(filename, 'r')
     # Open master file in append-mode
-    master = open('./MDC/master.csv', 'a+')
+    master = open('master.csv', 'a+')
 
     with file as f:
         next(f)

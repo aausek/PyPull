@@ -12,7 +12,7 @@ This simple script downloads a file via a specific URL then proceeds to timestam
 - Execution logging
 - Appending contents to master
 
-## Libraries used
+## Modules used
 
 -  urllib.request
 -  os

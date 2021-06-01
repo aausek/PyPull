@@ -13,7 +13,7 @@ fileExtension = '.csv'
 
 # Funtion to access URL and download file
 def pullurl():
-    # Medical Checkin request URL
+    # Request URL
     url = 'https://www.example.com'
     # Make request to URL and download file to path and file name specified
     r = urllib.request.urlretrieve(url, path + timestr + fileExtension)
